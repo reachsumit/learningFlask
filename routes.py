@@ -31,7 +31,11 @@ def signup():
 		else:
 			newuser = User(form.first_name.data,form.last_name.data,form.email.data,form.password.data)
 			db.session.add(newuser)
-			db.session.commit()
+			try:
+				db.session.commit()
+			except:
+				db.session.rollback()
+				return render_template("signup.html", form=form,error='This email id alrady exists in the database')
 			session['email'] = newuser.email
 			print("New user email:"+newuser.email+" and password :"+form.password.data)
 			return redirect(url_for('home'))

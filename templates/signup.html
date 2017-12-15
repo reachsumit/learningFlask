@@ -36,6 +36,10 @@
 				{{ form.email }}
 			</div>
 
+			{% if error %}
+				<p class="error-message">{{ error }}</p>
+			{% endif %}
+
 			<div class="form-group">
 				{{ form.password.label }}
 				{% if form.password.errors %}
