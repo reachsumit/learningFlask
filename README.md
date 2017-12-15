@@ -5,7 +5,7 @@ The purpose of this project is to make a web application using Flask (a micro we
 3. Display an interactive map for the results (using leaflet.js), map should also provide hyperlinks with each marker for the corrseponding event's wikimedia page.
 
 ## Additional details
-* Web ap for this project is hosted at https://flaskdemomap.herokuapp.com/
+* Web app for this project is hosted at https://flaskdemomap.herokuapp.com/
 * Complete code is available in this repository.
 
 ## Screenshots
